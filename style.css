@@ -568,17 +568,3 @@ e4{color: #9BA09D;font-style: italic;font-size: 1.02em;letter-spacing: 0.4px;tex
 .chrono-legend{display:flex;flex-wrap:wrap;gap:14px 20px;margin-top:40px;padding-top:18px;border-top:1px solid rgba(185,190,186,.1);font-size:12px;color:var(--text);opacity:.7}
 .chrono-legend span{display:flex;align-items:center;gap:7px}
 .chrono-legend i{width:8px;height:8px;background:var(--pip);transform:rotate(45deg);display:inline-block}
-.decree-stamp {font-family: 'EB Garamond', serif;font-size: 0.75rem;letter-spacing: 0.15em;text-transform: uppercase;color: #B9BEBA;opacity: 0.7;margin-bottom: 1em;}
-.decree-phase-title {font-family: 'Cinzel', serif;font-weight: 800;text-transform: uppercase;letter-spacing: 0.08em;color: #7DD6A8;font-size: 1.3rem;margin: 1.6em 0 0.8em;}
-.decree-article { margin-bottom: 1.3em; }
-.decree-article-head {display: flex;align-items: baseline;gap: 0.6em;margin-bottom: 0.3em;}
-.decree-article-num {font-family: 'Cinzel', serif;font-weight: 800;font-size: 1.1rem;letter-spacing: 0.05em;color: #111315;background: #0F6E56;padding: 0.15em 0.55em;border-radius: 3px;white-space: nowrap;}
-.decree-article-title {  font-family: 'EB Garamond', serif;font-style: italic;font-size: 1.05rem;color: #7DD6A8;}
-.decree-tag-pill {display: inline-block;font-family: 'Cinzel', serif;font-size: 0.9rem;letter-spacing: 0.05em;text-transform: uppercase;color: #7DD6A8;border: 1px solid #2F7D5F;border-radius: 999px;padding: 0.1em 0.7em;margin: 0 0.15em;}
-.decree-tag-pill--alert {background: #2F7D5F;color: #131415;border-color: #2F7D5F;}
-.decree-callout {border-left: 3px solid #0F6E56;background: rgba(15, 110, 86, 0.08);padding: 0.8em 1.1em 0.2em;margin: 0 0 1.4em;}
-.decree-field-list { margin: 1.2em 0; }
-.decree-field { padding: 0.7em 0; border-bottom: 1px solid rgba(125,214,168,0.15); }
-.decree-field:last-child { border-bottom: none; }
-.decree-field-label {  display: block;  font-family: 'Cinzel', serif;  font-size: 0.72rem;  text-transform: uppercase;  letter-spacing: 0.08em;  color: #7DD6A8;  margin-bottom: 0.25em;}
-.decree-field-value {  font-family: 'EB Garamond', serif;  color: #B9BEBA;  font-size: 1rem;  line-height: 1.5;}
