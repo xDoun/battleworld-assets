@@ -58,7 +58,7 @@ a.forumtitle:hover{text-decoration:underline}
 .badge-forum{display:inline-block;background-color:#132724;color:#e1f5ee;font-size:11px;font-weight:500;letter-spacing:0.5px;padding:3px 9px;border-radius:3px;margin-right:8px;white-space:nowrap;text-transform:uppercase;vertical-align:middle;font-family:'Cinzel',serif}
 .pa-block{font-size:13px}
 .pa-grid{display:grid;grid-template-columns:1fr 1.5fr 1.9fr;gap:16px;align-items:stretch}
-.pa-col{display:flex;flex-direction:column;gap:16px;height:100%}
+.pa-col{display:flex;flex-direction:column;gap:16px;height:100%;min-height:0}
 .pa-card{background-color:#0c0d0e;border:1px solid #1a1e20;border-radius:6px;padding:14px;box-sizing:border-box;display:flex;flex-direction:column}
 .pa-card-title{color:#7dd6a8;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #1e2226;font-family:'Cinzel',serif}
 .pa-card-nav{min-height:230px}
@@ -86,8 +86,8 @@ a.forumtitle:hover{text-decoration:underline}
 .pa-staff-links{margin-top:8px;font-size:11px}
 .pa-staff-links a{color:#7dd6a8;text-decoration:none}
 .pa-staff-links a:hover{text-decoration:underline}
-.pa-card-disclaimer{flex:1;height:auto;min-height:265px}
-.pa-disclaimer-wrap{flex:1;overflow-y:auto;padding-right:6px}
+.pa-card-disclaimer{flex:1;height:auto;min-height:265px;min-height:0}
+.pa-disclaimer-wrap{flex:1;overflow-y:auto;padding-right:6px;min-height:0}
 .pa-disclaimer-wrap::-webkit-scrollbar{width:4px}
 .pa-disclaimer-wrap::-webkit-scrollbar-thumb{background:#165B47;border-radius:2px}
 .pa-disclaimer-text{color:#8b949e;font-size:11.5px;line-height:1.7;margin:0;font-family:'EB Garamond',serif}
