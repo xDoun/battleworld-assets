@@ -979,7 +979,7 @@ table.table1 tbody tr:first-child td{border-top:none !important}
 .rpt-titles{position:absolute;left:0;right:0;bottom:14px;z-index:2;text-align:center}
 .rpt-sur{font-family:'Cinzel',serif;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--hl)}
 .rpt-sur::before,.rpt-sur::after{content:'';display:inline-block;width:34px;height:1px;background:var(--acc);vertical-align:middle;margin:0 10px}
-.rpt-titre{font-family:'Cinzel',serif;font-weight:800;font-size:27px;letter-spacing:2px;line-height:1.2;margin-top:4px;background:linear-gradient(180deg,#fff,var(--hl));-webkit-background-clip:text;background-clip:text;color:transparent}
+.rpt-titre{font-family:'Cinzel',serif;font-weight:800;font-size:27px;letter-spacing:2px;line-height:1.2;margin-top:4px;color:#F2F5F3!important;text-shadow:0 2px 14px rgba(0,0,0,.85),0 0 22px var(--acc)}
 .rpt-meta{display:flex;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)}
 .rpt-m{flex:1 1 150px;display:flex;flex-direction:column;justify-content:center;padding:9px 14px;text-align:center;border-right:1px solid rgba(255,255,255,.07)}
 .rpt-m:last-child{border-right:0}
