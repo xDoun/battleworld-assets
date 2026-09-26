@@ -526,10 +526,11 @@ e4{color: #9BA09D;font-style: italic;font-size: 1.02em;letter-spacing: 0.4px;tex
 .decree-rule-body{flex:1}
 .decree-rule-title{font-family:'Cinzel',serif;font-weight:800;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:#0F6E56;margin-bottom:6px}
 .chrono-chronologie{--forest:#2F7D5F;--mint:#7DD6A8;--text:#B9BEBA;--card:#111315;font-family:'EB Garamond',serif;color:var(--text);margin-top:8px}
+.chrono-data{display:none}
 .chrono-socle{position:relative;display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:16px;margin-bottom:4px}
-.chrono-socle::before{content:'';position:absolute;left:0;right:0;bottom:20px;height:1px;background:var(--forest);opacity:.45}
-.chrono-waypoint{position:relative;display:flex;flex-direction:column;align-items:center;gap:9px;flex:1;text-align:center}
-.chrono-dot{width:7px;height:7px;border-radius:50%;background:var(--forest);z-index:1;display:block}
+.chrono-socle::before{content:'';position:absolute;left:0;right:0;bottom:19px;height:1px;background:var(--forest);opacity:.45}
+.chrono-waypoint{position:relative;display:flex;flex-direction:column-reverse;align-items:center;gap:9px;flex:1;text-align:center}
+.chrono-dot{position:relative;width:7px;height:7px;border-radius:50%;background:var(--forest);z-index:1;display:block}
 .chrono-waypoint--zero .chrono-dot{background:var(--mint);box-shadow:0 0 0 4px rgba(125,214,168,.12)}
 .chrono-label{font-size:12px;color:var(--text);opacity:.75;line-height:1.35;max-width:96px;display:block}
 .chrono-waypoint--zero .chrono-label{color:var(--mint);font-weight:600;opacity:1}
@@ -546,32 +547,33 @@ e4{color: #9BA09D;font-style: italic;font-size: 1.02em;letter-spacing: 0.4px;tex
 .chrono-plot-track{position:relative;height:100%;margin:0 44px}
 .chrono-plot-axis{position:absolute;left:0;right:0;bottom:24px;height:1px;background:var(--forest);opacity:.4}
 .chrono-plot-marker{position:absolute;top:10px;bottom:24px;left:0;width:0;border-left:1px dashed var(--forest);opacity:.5}
-.chrono-plot-marker-label{position:absolute;top:0;left:0;font-family:'EB Garamond',serif;font-style:italic;font-size:10px;color:var(--text);opacity:.55;white-space:nowrap}
+.chrono-plot-marker-label{position:absolute;top:0;left:0;font-style:italic;font-size:10px;color:var(--text);opacity:.55;white-space:nowrap}
 .chrono-plot-marker-label--right{transform:translateX(-100%)}
-.chrono-plot-tick{position:absolute;bottom:0;left:0;font-family:'EB Garamond',serif;font-size:10.5px;color:var(--text);opacity:.6;transform:translateX(-50%);white-space:nowrap}
-.chrono-plot-point{position:absolute;left:0;bottom:30px;width:12px;height:12px;border-radius:50%;background:var(--pip);opacity:.95;transform:translateX(-50%)}
-.chrono-plot-point--minor{width:8px;height:8px;opacity:.5}
-.chrono-registre{display:flex;flex-direction:column}
+.chrono-plot-tick{position:absolute;bottom:0;left:0;font-size:10.5px;color:var(--text);opacity:.6;transform:translateX(-50%);white-space:nowrap}
+.chrono-plot-point{position:absolute;left:0;bottom:30px;width:12px;height:12px;border-radius:50%;background:var(--pip);opacity:.95;transform:translateX(-50%);cursor:help;transition:transform .15s ease}
+.chrono-plot-point:hover{transform:translateX(-50%) scale(1.35)}
+.chrono-registre{display:flex;flex-direction:column;gap:8px}
 .chrono-decade{background:var(--card);border:1px solid rgba(47,125,95,.25);clip-path:polygon(0 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)}
 .chrono-decade>summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 22px}
 .chrono-decade>summary::-webkit-details-marker{display:none}
 .chrono-range{font-family:'Cinzel',serif;font-weight:700;font-size:13.5px;letter-spacing:.02em;color:var(--mint)}
-.chrono-summary-right{display:flex;align-items:center}
+.chrono-summary-right{display:flex;align-items:center;gap:10px}
 .chrono-count{font-size:12.5px;color:var(--text);opacity:.65;white-space:nowrap}
-.chrono-chevron{font-size:10px;color:var(--forest);transition:transform .2s ease;margin-left:4px}
+.chrono-chevron{font-size:10px;color:var(--forest);transition:transform .2s ease}
 .chrono-decade[open] .chrono-chevron{transform:rotate(180deg)}
 .chrono-entries{padding:2px 22px 18px}
 .chrono-entries--empty{padding:0 22px 18px;font-size:13px;font-style:italic;color:var(--text);opacity:.5}
-.chrono-entry{position:relative;display:flex;align-items:center;gap:13px;padding:9px 0 9px 24px;border-top:1px solid rgba(185,190,186,.07)}
+.chrono-entry{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:0 13px;padding:9px 0 9px 24px;border-top:1px solid rgba(185,190,186,.07);outline:none;cursor:default}
 .chrono-entry:first-child{border-top:none}
-.chrono-branch{position:absolute;left:0;top:50%;width:15px;height:1px;background:var(--forest);transform:translateY(-50%);opacity:.8}
+.chrono-branch{position:absolute;left:0;top:24px;width:15px;height:1px;background:var(--forest);transform:translateY(-50%);opacity:.8}
 .chrono-branch::before{content:'';position:absolute;left:1px;top:-5px;width:1px;height:10px;background:var(--forest);transform:rotate(22deg);opacity:.8}
 .chrono-day{font-size:12px;color:var(--forest);min-width:58px;font-variant-numeric:tabular-nums;line-height:1.35}
 .chrono-day em{display:block;font-size:10px;font-style:normal;opacity:.55}
 .chrono-pip{flex-shrink:0;width:9px;height:9px;background:var(--pip);transform:rotate(45deg);display:inline-block}
-.chrono-name{font-size:15px;color:var(--text);flex:1}
-.chrono-detail{position:absolute;left:24px;top:100%;margin-top:5px;background:#0c0d0e;border:1px solid rgba(47,125,95,.3);padding:9px 13px;font-size:12px;line-height:1.55;opacity:0;pointer-events:none;transform:translateY(-4px);transition:opacity .15s ease,transform .15s ease;z-index:2;min-width:230px}
-.chrono-entry:hover .chrono-detail,.chrono-entry:focus-within .chrono-detail{opacity:1;transform:translateY(0);pointer-events:auto}
+.chrono-name{font-size:15px;color:var(--text);flex:1;transition:color .15s ease}
+.chrono-entry:hover .chrono-name,.chrono-entry:focus-within .chrono-name{color:var(--mint)}
+.chrono-detail{flex-basis:100%;box-sizing:border-box;max-height:0;overflow:hidden;opacity:0;padding-left:93px;font-size:12px;line-height:1.55;transition:max-height .2s ease,opacity .2s ease,padding-top .2s ease}
+.chrono-entry:hover .chrono-detail,.chrono-entry:focus-within .chrono-detail{max-height:60px;opacity:1;padding-top:5px}
 .chrono-terre{margin:0;color:var(--mint)}
 .chrono-meta{margin:3px 0 0;color:var(--text);opacity:.8}
 .chrono-horizon{display:flex;align-items:center;gap:10px;padding-left:2px;font-size:12px;font-style:italic;color:var(--text);opacity:.5}
