@@ -57,12 +57,12 @@ a.forumtitle:hover{text-decoration:underline}
 #modernbb #wrap ul.topiclist.forums li.row:last-child{border-bottom:none !important}
 .badge-forum{display:inline-block;background-color:#132724;color:#e1f5ee;font-size:11px;font-weight:500;letter-spacing:0.5px;padding:3px 9px;border-radius:3px;margin-right:8px;white-space:nowrap;text-transform:uppercase;vertical-align:middle;font-family:'Cinzel',serif}
 .pa-block{font-size:13px}
-.pa-grid{display:grid;grid-template-columns:1fr 1.5fr 1.9fr;gap:16px;align-items:start}
-.pa-col{display:flex;flex-direction:column;gap:16px}
+.pa-grid{display:grid;grid-template-columns:1fr 1.5fr 1.9fr;gap:16px;align-items:stretch}
+.pa-col{display:flex;flex-direction:column;gap:16px;height:100%}
 .pa-card{background-color:#0c0d0e;border:1px solid #1a1e20;border-radius:6px;padding:14px;box-sizing:border-box;display:flex;flex-direction:column}
 .pa-card-title{color:#7dd6a8;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #1e2226;font-family:'Cinzel',serif}
 .pa-card-nav{min-height:230px}
-.pa-card-topsites{padding:10px 14px}
+.pa-card-topsites{padding:10px 14px;flex:1;height:auto}
 .pa-card-staff{padding:10px 14px}
 .pa-nav-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
 .pa-nav-list a{display:block;color:#b9beba;text-decoration:none;font-size:11.5px;text-transform:uppercase;letter-spacing:0.3px;padding:6px 8px;border-radius:4px;transition:all 0.15s ease}
@@ -86,7 +86,7 @@ a.forumtitle:hover{text-decoration:underline}
 .pa-staff-links{margin-top:8px;font-size:11px}
 .pa-staff-links a{color:#7dd6a8;text-decoration:none}
 .pa-staff-links a:hover{text-decoration:underline}
-.pa-card-disclaimer{height:265px}
+.pa-card-disclaimer{flex:1;height:auto;min-height:265px}
 .pa-disclaimer-wrap{flex:1;overflow-y:auto;padding-right:6px}
 .pa-disclaimer-wrap::-webkit-scrollbar{width:4px}
 .pa-disclaimer-wrap::-webkit-scrollbar-thumb{background:#165B47;border-radius:2px}
@@ -96,7 +96,7 @@ a.forumtitle:hover{text-decoration:underline}
 .pa-contexte-wrap::-webkit-scrollbar-thumb{background:#165B47;border-radius:2px}
 .pa-contexte-gif{float:left;width:100px;height:80px;object-fit:cover;border-radius:4px;border:1px solid #165B47;margin:0 10px 6px 0}
 .pa-contexte-text{color:#b9beba;font-size:12px;line-height:1.6;margin:0;font-family:'EB Garamond',serif}
-.pa-card-scenarios{height:163px;justify-content:flex-start}
+.pa-card-scenarios{justify-content:flex-start;flex:1;height:auto;min-height:163px}
 .pa-scenarios-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
 .pa-scenario-icon{position:relative;display:block;aspect-ratio:1 / 1;border-radius:6px;overflow:hidden;border:2px solid #1e2226;transition:border-color 0.15s ease}
 .pa-scenario-icon img{width:100%;height:100%;object-fit:cover;display:block}
