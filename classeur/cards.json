@@ -18,9 +18,9 @@
     { "id": "ms-marvel",       "name": "Ms. Marvel",        "rarity": "rare",       "origin": "surhumain",      "number": null, "image": "set1/ms-marvel.gif" },
 
     { "id": "hulk",            "name": "Hulk",              "rarity": "epique",     "origin": "surhumain",      "number": 15,   "image": "set1/hulk.gif" },
-    { "id": "groot",           "name": "Groot",             "rarity": "epique",     "origin": "extraterrestre", "number": 17,   "image": "set1/groot.png" },
-    { "id": "phoenix",         "name": "Phoenix",           "rarity": "epique",     "origin": "mutant",         "number": 16,   "image": "set1/phoenix.png" },
-    { "id": "ghost-rider",     "name": "Ghost Rider",       "rarity": "epique",     "origin": "magie",          "number": 18,   "image": "set1/ghost-rider.png" },
+    { "id": "groot",           "name": "Groot",             "rarity": "epique",     "origin": "extraterrestre", "number": 17,   "image": "set1/groot.gif" },
+    { "id": "phoenix",         "name": "Phoenix",           "rarity": "epique",     "origin": "mutant",         "number": 16,   "image": "set1/phoenix.gif" },
+    { "id": "ghost-rider",     "name": "Ghost Rider",       "rarity": "epique",     "origin": "magie",          "number": 18,   "image": "set1/ghost-rider.gif" },
 
     { "id": "vision",          "name": "Vision",            "rarity": "legendaire", "origin": "tech",           "number": 20,   "image": "set1/vision.gif" },
     { "id": "silver-surfer",   "name": "Silver Surfer",     "rarity": "legendaire", "origin": "cosmique",       "number": 19,   "image": "set1/silver-surfer.gif" },
