@@ -565,7 +565,7 @@ dl.codebox dt {  display: flex;  justify-content: space-between;  align-items: c
 .postprofile-rank{border-bottom:1px solid #1e2226 !important}
 .postprofile-info hr{border:none !important;border-top:1px solid #165B47 !important}
 .postprofile-contact{display:none !important}
-.postprofile-info img { max-width: 100% !important; height: auto !important; }
+.postprofile-info img:not([style*="height"]):not([height]) { max-width: 100% !important; height: auto !important; }
 .custom-center-col{position:relative !important}
 .custom-center-col > img:first-child{position:absolute !important;top:0 !important;left:0 !important;width:150px !important;height:104px !important;max-width:none !important;max-height:none !important;margin:0 !important;float:none !important;object-fit:cover;border:none !important;border-radius:0 !important;clip-path:polygon(0 0,100% 0,78% 100%,0% 100%);z-index:2}
 .custom-center-col:has(> img:first-child) .custom-desc-box{padding-left:168px !important}
