@@ -394,7 +394,7 @@ ul.topiclist li.header dt,ul.topiclist li.header dd{color:#7dd6a8 !important}
 .fiche-histoire-title{position:relative;z-index:1;margin-left:24px;font-family:'Playfair Display',serif;font-weight:800;font-size:32px;letter-spacing:3px;text-transform:uppercase;color:#FFFFFF;text-shadow:0 0 10px rgba(0,0,0,0.55),2px 2px 0 rgba(0,0,0,0.4)}
 .fiche-histoire-intro{font-style:italic;font-size:14px !important;line-height:1.6 !important;color:#7d827e;margin:0 0 20px 0}
 .fiche-histoire-content{overflow:auto}
-.fiche-histoire-content p{font-size:11px !important;line-height:1.8 !important;color:#B9BEBA !important;font-family:'EB Garamond',Georgia,serif !important}
+.fiche-histoire-content p{font-size:15px !important;line-height:1.7 !important;color:#B9BEBA !important;font-family:'EB Garamond',Georgia,serif !important}
 .fiche-block-mini{height:340px !important;min-height:0 !important}
 .fiche-block-mini .fiche-tab-panel{position:relative;height:100%;padding:0 !important}
 .fiche-mini-banner{position:absolute;top:0;left:0;right:0;height:70px;background:linear-gradient(90deg,#0F6E56,#2F7D5F 60%,#7DD6A8);z-index:0}
