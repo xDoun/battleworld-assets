@@ -894,11 +894,12 @@ p0{font-style:italic;color:#8E948F}
 .fiche-block .fiche-tab-panel{box-sizing:border-box;height:100%}
 .fiche-block .fiche-tab-panel[data-tab-panel='caractere'].is-active,.fiche-block .fiche-tab-panel[data-tab-panel='histoire'].is-active{display:flex;flex-direction:column}
 .fiche-caractere-header,.fiche-traits,.fiche-thin-sep,.fiche-histoire-header{flex-shrink:0}
-.fiche-caractere-scroll,.fiche-histoire-scroll{flex:1;min-height:0;overflow-y:auto}
-.fiche-caractere-scroll::-webkit-scrollbar,.fiche-histoire-scroll::-webkit-scrollbar{width:6px}
-.fiche-caractere-scroll::-webkit-scrollbar-track,.fiche-histoire-scroll::-webkit-scrollbar-track{background:transparent}
-.fiche-caractere-scroll::-webkit-scrollbar-thumb,.fiche-histoire-scroll::-webkit-scrollbar-thumb{background:#2F7D5F;border-radius:3px}
-.fiche-caractere-scroll::-webkit-scrollbar-thumb:hover,.fiche-histoire-scroll::-webkit-scrollbar-thumb:hover{background:#7DD6A8}
+.fiche-anecdotes,.fiche-histoire-scroll{flex:1;min-height:0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#2F7D5F transparent}
+.fiche-anecdotes::-webkit-scrollbar,.fiche-histoire-scroll::-webkit-scrollbar{width:6px}
+.fiche-anecdotes::-webkit-scrollbar-track,.fiche-histoire-scroll::-webkit-scrollbar-track{background:transparent}
+.fiche-anecdotes::-webkit-scrollbar-thumb,.fiche-histoire-scroll::-webkit-scrollbar-thumb{background:#2F7D5F;border-radius:3px}
+.fiche-anecdotes::-webkit-scrollbar-thumb:hover,.fiche-histoire-scroll::-webkit-scrollbar-thumb:hover{background:#7DD6A8}
+.fiche-anecdotes{padding-right:10px}
 .dossier-toggle{display:none}
 .dossier-mask{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;cursor:pointer;background:radial-gradient(ellipse 55% 68% at center,#030304 0%,#070809 35%,#0c0d0f 65%,#111315 100%);text-align:center;transition:opacity .35s ease,visibility .35s ease}
 .dossier-mask::after{content:'';position:absolute;inset:14px;border:2px solid var(--seal-accent);border-radius:14px;box-shadow:inset 0 0 8px var(--seal-accent);-webkit-mask:linear-gradient(135deg,#000 0 7%,transparent 11% 89%,#000 93%);mask:linear-gradient(135deg,#000 0 7%,transparent 11% 89%,#000 93%);animation:dossier-pulse 2.8s ease-in-out infinite;pointer-events:none}
