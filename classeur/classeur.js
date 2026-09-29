@@ -35,10 +35,15 @@
   var REPO_BASE = detectBase();
 
   var CARDS_URL = REPO_BASE + "cards.json";
-  /* collections.json reste TOUJOURS sur @main : c'est le fichier que le
-     staff modifie apres chaque tirage, il doit etre pris en compte tout de
-     suite sans retoucher la page HTML du forum. */
-  var COLLECTIONS_URL = MAIN_BASE + "collections.json";
+
+  /* collections.json est lu DIRECTEMENT sur GitHub, pas via jsDelivr :
+     le CDN garde les fichiers d'une branche en cache jusqu'a 12 h, ce qui
+     est incompatible avec un fichier modifie a chaque tirage. GitHub raw
+     autorise la lecture depuis un autre site et se met a jour en quelques
+     secondes. Si GitHub raw est indisponible, on retombe sur la copie
+     jsDelivr (possiblement un peu datee, mais mieux qu'une page en erreur). */
+  var COLLECTIONS_URL = "https://raw.githubusercontent.com/xDoun/battleworld-assets/main/classeur/collections.json";
+  var COLLECTIONS_FALLBACK = MAIN_BASE + "collections.json";
 
   var RARITY_ORDER = ["commune", "rare", "epique", "legendaire"];
   var RARITY_LABELS = {
@@ -82,10 +87,20 @@
     return qs("pseudo") || currentUser() || root.getAttribute("data-username") || null;
   }
 
-  function fetchJson(url) {
-    return fetch(url, { cache: "no-store" }).then(function (r) {
-      if (!r.ok) { throw new Error("fetch failed " + url); }
+  function fetchJson(url, bust) {
+    var u = bust
+      ? url + (url.indexOf("?") === -1 ? "?" : "&") + "t=" + Date.now()
+      : url;
+    return fetch(u, { cache: "no-store" }).then(function (r) {
+      if (!r.ok) { throw new Error("fetch failed " + u); }
       return r.json();
+    });
+  }
+
+  function fetchCollections() {
+    return fetchJson(COLLECTIONS_URL, true).catch(function (e) {
+      e = null;
+      return fetchJson(COLLECTIONS_FALLBACK, true);
     });
   }
 
@@ -239,7 +254,7 @@
       return;
     }
 
-    Promise.all([fetchJson(CARDS_URL), fetchJson(COLLECTIONS_URL)])
+    Promise.all([fetchJson(CARDS_URL), fetchCollections()])
       .then(function (results) {
         var collectionsData = results[1];
         delete collectionsData._comment;
