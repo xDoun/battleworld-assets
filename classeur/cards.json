@@ -1,0 +1,29 @@
+{
+  "set": "Set 1",
+  "cards": [
+    { "id": "wolverine",       "name": "Wolverine",         "rarity": "commune",    "origin": "mutant",         "number": 3, "image": "set1/wolverine.png" },
+    { "id": "deadpool",        "name": "Deadpool",          "rarity": "commune",    "origin": "mutant",         "number": 5, "image": "set1/deadpool.png" },
+    { "id": "spider-man",      "name": "Spider-Man",        "rarity": "commune",    "origin": "surhumain",      "number": 1, "image": "set1/spider-man.png" },
+    { "id": "captain-america", "name": "Captain America",   "rarity": "commune",    "origin": "surhumain",      "number": 4, "image": "set1/captain-america.png" },
+    { "id": "miles-morales",   "name": "Miles Morales",     "rarity": "commune",    "origin": "surhumain",      "number": 7, "image": "set1/miles-morales.png" },
+    { "id": "iron-man",        "name": "Iron Man",          "rarity": "commune",    "origin": "tech",           "number": 2, "image": "set1/iron-man.png" },
+    { "id": "thor",            "name": "Thor",              "rarity": "commune",    "origin": "cosmique",       "number": 6, "image": "set1/thor.png" },
+    { "id": "black-widow",     "name": "Black Widow",       "rarity": "commune",    "origin": "humain",         "number": 8, "image": "set1/black-widow.png" },
+
+    { "id": "scarlet-witch",   "name": "Scarlet Witch",     "rarity": "rare",       "origin": "magie",          "number": 11,   "image": "set1/scarlet-witch.gif" },
+    { "id": "doctor-strange",  "name": "Dr. Strange",       "rarity": "rare",       "origin": "magie",          "number": 13,   "image": "set1/doctor-strange.gif" },
+    { "id": "loki",            "name": "Loki",              "rarity": "rare",       "origin": "cosmique",       "number": 14, "image": "set1/loki.gif" },
+    { "id": "storm",           "name": "Storm",             "rarity": "rare",       "origin": "mutant",         "number": 9, "image": "set1/storm.gif" },
+    { "id": "venom",           "name": "Venom",             "rarity": "rare",       "origin": "extraterrestre", "number": 10,   "image": "set1/venom.gif" },
+    { "id": "ms-marvel",       "name": "Ms. Marvel",        "rarity": "rare",       "origin": "surhumain",      "number": 12, "image": "set1/ms-marvel.gif" },
+
+    { "id": "hulk",            "name": "Hulk",              "rarity": "epique",     "origin": "surhumain",      "number": 15,   "image": "set1/hulk.gif" },
+    { "id": "groot",           "name": "Groot",             "rarity": "epique",     "origin": "extraterrestre", "number": 17,   "image": "set1/groot.gif" },
+    { "id": "phoenix",         "name": "Phoenix",           "rarity": "epique",     "origin": "mutant",         "number": 16,   "image": "set1/phoenix.gif" },
+    { "id": "ghost-rider",     "name": "Ghost Rider",       "rarity": "epique",     "origin": "magie",          "number": 18,   "image": "set1/ghost-rider.gif" },
+
+    { "id": "vision",          "name": "Vision",            "rarity": "legendaire", "origin": "tech",           "number": 20,   "image": "set1/vision.gif" },
+    { "id": "silver-surfer",   "name": "Silver Surfer",     "rarity": "legendaire", "origin": "cosmique",       "number": 19,   "image": "set1/silver-surfer.gif" },
+    { "id": "galactus",        "name": "Galactus",          "rarity": "legendaire", "origin": "cosmique",       "number": 21,   "image": "set1/galactus.gif" }
+  ]
+}
