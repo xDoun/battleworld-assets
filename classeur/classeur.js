@@ -9,10 +9,36 @@
 */
 
 (function () {
-  var REPO_BASE = "https://cdn.jsdelivr.net/gh/xDoun/battleworld-assets@main/classeur/";
+  var MAIN_BASE = "https://cdn.jsdelivr.net/gh/xDoun/battleworld-assets@main/classeur/";
+
+  /* REPO_BASE suit la version depuis laquelle CE script a ete charge.
+     Si la page pointe sur un SHA de commit (ex. @5e2f32b), la CSS, les
+     vignettes et les images viennent du meme instantane : aucun cache a
+     contourner, et tout reste coherent entre eux. */
+  function detectBase() {
+    try {
+      var s = document.currentScript;
+      if (!s) {
+        var all = document.getElementsByTagName("script");
+        for (var i = all.length - 1; i >= 0; i--) {
+          if (all[i].src && all[i].src.indexOf("classeur.js") !== -1) { s = all[i]; break; }
+        }
+      }
+      if (s && s.src) {
+        var cut = s.src.indexOf("classeur.js");
+        if (cut > 0) { return s.src.slice(0, cut); }
+      }
+    } catch (e) { e = null; }
+    return MAIN_BASE;
+  }
+
+  var REPO_BASE = detectBase();
 
   var CARDS_URL = REPO_BASE + "cards.json";
-  var COLLECTIONS_URL = REPO_BASE + "collections.json";
+  /* collections.json reste TOUJOURS sur @main : c'est le fichier que le
+     staff modifie apres chaque tirage, il doit etre pris en compte tout de
+     suite sans retoucher la page HTML du forum. */
+  var COLLECTIONS_URL = MAIN_BASE + "collections.json";
 
   var RARITY_ORDER = ["commune", "rare", "epique", "legendaire"];
   var RARITY_LABELS = {
