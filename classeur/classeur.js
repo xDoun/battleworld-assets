@@ -37,8 +37,23 @@
     return new URLSearchParams(window.location.search).get(name);
   }
 
+  /* pseudo du membre connecte : ForumActif expose _userdata sur toutes
+     ses pages. Le champ username peut etre enrobe de HTML quand le groupe
+     a une couleur, d'ou le nettoyage via textContent. */
+  function currentUser() {
+    try {
+      if (window._userdata && _userdata.session_logged_in && _userdata.username) {
+        var tmp = document.createElement("div");
+        tmp.innerHTML = _userdata.username;
+        var name = (tmp.textContent || tmp.innerText || "").trim();
+        if (name) { return name; }
+      }
+    } catch (e) { e = null; }
+    return null;
+  }
+
   function targetUsername(root) {
-    return qs("pseudo") || root.getAttribute("data-username") || null;
+    return qs("pseudo") || currentUser() || root.getAttribute("data-username") || null;
   }
 
   function fetchJson(url) {
@@ -81,10 +96,12 @@
         "</div>"
       );
     }
+    /* case verrouillee : on n'affiche QUE le numero, jamais le nom,
+       pour ne pas devoiler la composition du set */
     return (
       '<div class="cx-slot locked">' +
         '<div class="cx-lock-icon">&#128274;</div>' +
-        '<div class="cx-name">' + card.name + "</div>" +
+        '<div class="cx-name">' + (card.number ? "n&deg;" + card.number : "?") + "</div>" +
       "</div>"
     );
   }
@@ -120,8 +137,18 @@
       return RARITY_LABELS[r] + " " + summary.totals[r].owned + "/" + summary.totals[r].total;
     }).join(" &nbsp;·&nbsp; ");
 
+    /* le lien retour n'a de sens que si on sait qui est connecte
+       ET qu'on est en train de regarder le classeur de quelqu'un d'autre */
+    var me = currentUser();
+    var ownLinkHtml = (me && me !== username)
+      ? '<span class="cx-own-link" id="cx-own-link">Revenir à mon classeur</span>'
+      : "";
+
     var sectionsHtml = RARITY_ORDER.map(function (r) {
-      var group = cards.filter(function (c) { return c.rarity === r; });
+      /* tri par numero de carte : maintenant que les cases verrouillees
+         affichent le numero, la suite doit se lire dans l'ordre */
+      var group = cards.filter(function (c) { return c.rarity === r; })
+                       .sort(function (a, b) { return (a.number || 999) - (b.number || 999); });
       var tiles = group.map(function (c) { return slotHtml(c, owned); }).join("");
       return (
         '<div class="cx-section-title">' + RARITY_LABELS[r] + "</div>" +
@@ -135,7 +162,7 @@
       '<div class="cx-switcher">' +
         '<input type="text" id="cx-pseudo-input" placeholder="Voir le classeur d\'un membre...">' +
         '<button id="cx-pseudo-go">Voir</button>' +
-        '<span class="cx-own-link" id="cx-own-link">Revenir à mon classeur</span>' +
+        ownLinkHtml +
       "</div>" +
       '<div class="cx-summary">' +
         '<div class="cx-total cx-count">' + summary.ownedCount + " / " + summary.total + " cartes</div>" +
@@ -164,11 +191,14 @@
       if (e.key === "Enter") { goBtn.click(); }
     });
 
-    document.getElementById("cx-own-link").addEventListener("click", function () {
-      var url = new URL(window.location.href);
-      url.searchParams.delete("pseudo");
-      window.location.href = url.toString();
-    });
+    var ownLink = document.getElementById("cx-own-link");
+    if (ownLink) {
+      ownLink.addEventListener("click", function () {
+        var url = new URL(window.location.href);
+        url.searchParams.delete("pseudo");
+        window.location.href = url.toString();
+      });
+    }
   }
 
   function init() {
@@ -179,7 +209,7 @@
 
     var username = targetUsername(root);
     if (!username) {
-      root.innerHTML = '<div class="cx-empty-state">Indique un pseudo via ?pseudo=NomDuMembre dans le lien pour afficher un classeur.</div>';
+      root.innerHTML = '<div class="cx-empty-state">Connecte-toi pour voir ton classeur, ou ajoute ?pseudo=NomDuMembre à l\'adresse pour consulter celui d\'un autre membre.</div>';
       return;
     }
 
