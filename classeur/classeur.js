@@ -22,6 +22,17 @@
     legendaire: "Légendaires"
   };
 
+  /* charge classeur.css tout seul : inutile de toucher a style.css,
+     et la feuille n'est chargee que sur la page du classeur */
+  function ensureStyles() {
+    if (document.getElementById("cx-styles")) { return; }
+    var link = document.createElement("link");
+    link.id = "cx-styles";
+    link.rel = "stylesheet";
+    link.href = REPO_BASE + "classeur.css";
+    document.head.appendChild(link);
+  }
+
   function qs(name) {
     return new URLSearchParams(window.location.search).get(name);
   }
@@ -163,6 +174,8 @@
   function init() {
     var root = document.getElementById("classeur-app");
     if (!root) { return; }
+
+    ensureStyles();
 
     var username = targetUsername(root);
     if (!username) {
