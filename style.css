@@ -51,7 +51,7 @@ form label{color:#b9beba!important}
 .inputbox,input.inputbox,select{background-color:#111315!important;color:#e6e6e6!important;border:1px solid #1e2226!important}
 .sceditor-container{background-color:#0c0d0e!important;border:1px solid #1e2226!important}
 .sceditor-toolbar{background-color:#121316!important;border-bottom:1px solid #1e2226!important}
-.sceditor-button div{filter:grayscale(1) invert(1) brightness(1.5) contrast(1.1)!important;opacity:.8;transition:opacity .2s}
+.sceditor-button div{filter:invert(1) hue-rotate(180deg) brightness(1.3)!important;opacity:.85;transition:opacity .2s}
 .sceditor-button:hover div{opacity:1}
 .sceditor-container textarea{color:#e6e6e6!important;background:transparent!important}
 .fa_like_div{display:none!important}
