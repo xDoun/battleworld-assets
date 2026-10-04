@@ -1,7 +1,16 @@
 {
-  "_comment": "Une entrée par pseudo EXACT (respecte la casse utilisée sur le forum). 'cards' liste les id de cards.json possédés, avec le nombre d'exemplaires (utile pour la fusion : 5 doublons d'un même palier => 1 carte manquante garantie). Un pseudo absent de ce fichier = classeur vide (0/21), pas une erreur.",
+  "_comment": "Une entrée par pseudo EXACT (respecte la casse utilisée sur le forum). 'cards' liste les id de cards.json possédés avec le nombre d'exemplaires. 'sans_legendaire' = compteur de pity. 'doublons' = doublons cumulés, pour les badges Boucle temporelle. Un pseudo absent de ce fichier = classeur vide, pas une erreur.",
 
   "Peter Parker": {
     "cards": {}
+  },
+
+  "Johnathan Blaze": {
+    "cards": {
+      "wolverine": 1,
+      "thor": 1
+    },
+    "sans_legendaire": 2,
+    "doublons": 0
   }
 }
