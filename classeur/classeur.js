@@ -64,6 +64,28 @@
     document.head.appendChild(link);
   }
 
+  /* Le pseudo expose par ForumActif ne correspond pas toujours, caractere
+     pour caractere, a la cle ecrite dans collections.json : casse differente,
+     double espace, ou espace insecable glisse par le template. On compare donc
+     sur une forme normalisee, et on affiche ensuite la cle telle qu'elle est
+     ecrite dans le fichier. */
+  function normal(s) {
+    return String(s).replace(/\u00a0/g, " ").replace(/\s+/g, " ").trim().toLowerCase();
+  }
+
+  function trouverEntree(collections, pseudo) {
+    if (Object.prototype.hasOwnProperty.call(collections, pseudo)) {
+      return { cle: pseudo, data: collections[pseudo] };
+    }
+    var cible = normal(pseudo);
+    for (var k in collections) {
+      if (Object.prototype.hasOwnProperty.call(collections, k) && normal(k) === cible) {
+        return { cle: k, data: collections[k] };
+      }
+    }
+    return null;
+  }
+
   function qs(name) {
     return new URLSearchParams(window.location.search).get(name);
   }
@@ -76,7 +98,8 @@
       if (window._userdata && _userdata.session_logged_in && _userdata.username) {
         var tmp = document.createElement("div");
         tmp.innerHTML = _userdata.username;
-        var name = (tmp.textContent || tmp.innerText || "").trim();
+        var name = (tmp.textContent || tmp.innerText || "")
+                     .replace(/\u00a0/g, " ").replace(/\s+/g, " ").trim();
         if (name) { return name; }
       }
     } catch (e) { e = null; }
@@ -171,7 +194,9 @@
   }
 
   function render(root, cards, collections, username) {
-    var owned = (collections[username] && collections[username].cards) || {};
+    var trouve = trouverEntree(collections, username);
+    var owned = (trouve && trouve.data && trouve.data.cards) || {};
+    if (trouve) { username = trouve.cle; }
     var summary = buildSummary(cards, owned);
 
     var breakdown = RARITY_ORDER.map(function (r) {
@@ -181,9 +206,15 @@
     /* le lien retour n'a de sens que si on sait qui est connecte
        ET qu'on est en train de regarder le classeur de quelqu'un d'autre */
     var me = currentUser();
-    var ownLinkHtml = (me && me !== username)
+    var ownLinkHtml = (me && normal(me) !== normal(username))
       ? '<span class="cx-own-link" id="cx-own-link">Revenir à mon classeur</span>'
       : "";
+
+    /* pseudo absent du fichier : ce n'est pas une erreur (un membre qui n'a
+       jamais tire a bien un classeur vide), mais c'est aussi le symptome d'une
+       faute de frappe. On le signale sans bloquer l'affichage. */
+    var noteHtml = trouve ? "" :
+      '<div class="cx-note">Aucun tirage enregistré sous ce pseudo — ou l\'orthographe ne correspond pas à celle du forum.</div>';
 
     var sectionsHtml = RARITY_ORDER.map(function (r) {
       /* tri par numero de carte : maintenant que les cases verrouillees
@@ -209,6 +240,7 @@
         '<div class="cx-total cx-count">' + summary.ownedCount + " / " + summary.total + " cartes</div>" +
         '<div class="cx-breakdown">' + breakdown + "</div>" +
       "</div>" +
+      noteHtml +
       sectionsHtml;
 
     var byId = {};

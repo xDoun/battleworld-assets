@@ -221,3 +221,11 @@
 @media (max-width: 480px) {
   #classeur-app .cx-grid { grid-template-columns: repeat(auto-fill, minmax(105px, 1fr)); gap: 10px; }
 }
+
+#classeur-app .cx-note {
+  text-align: center;
+  font-size: .86em;
+  font-style: italic;
+  color: #C9962E;
+  margin: -4px 0 18px;
+}
