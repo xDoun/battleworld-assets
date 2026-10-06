@@ -2052,7 +2052,7 @@ html #tabs a:hover,html #tabs a:hover span,html #tabs .activetab a,html #tabs .a
 .bwf{--bg:#131415;--surface:#111315;--raise:#171a1b;--line:#252b29;--ink:#B9BEBA;--ink2:#E8ECE8;--dim:#7d8581;--emerald:#0F6E56;--forest:#2F7D5F;--mint:#7DD6A8;--encre:#0a0c0c;--papier:#A39E8E;--papier2:#C2BDAC;--fibre:#CEC9B9;font-family:'EB Garamond',Garamond,Georgia,serif;font-size:17px;line-height:1.45;color:var(--ink);text-align:left;position:relative}
 .bwf,.bwf *{box-sizing:border-box}
 .bwf button{font:inherit;color:inherit;background:none;border:0;border-radius:0;box-shadow:none;cursor:pointer;padding:0;margin:0;min-height:0;height:auto;width:auto;line-height:inherit;text-transform:none;text-shadow:none}
-.bwf p{margin:0;padding:0}
+.bwf p{margin:0;padding:0;font-family:inherit!important}
 .bwf img{max-width:100%;border:0}
 .bwf-wait{padding:26px;text-align:center;font-style:italic;color:var(--dim);border:1px dashed var(--line)}
 .bwj{margin:6px 4px 14px;transform:rotate(-.5deg);filter:drop-shadow(0 12px 10px rgba(0,0,0,.7))}
