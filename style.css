@@ -2444,10 +2444,12 @@ html #tabs a:hover,html #tabs a:hover span,html #tabs .activetab a,html #tabs .a
 .brf-nord::before{content:"\25B2";display:block;font-size:9px}
 .brf-ech{left:14px;top:12px;width:12%;padding-bottom:3px;border-bottom:1px solid #6F8F82;border-left:1px solid #6F8F82;border-right:1px solid #6F8F82;text-align:center;font-size:9px;color:#6F8F82}
 .brf-inf{left:0;right:0;bottom:0;background:linear-gradient(180deg,transparent,rgba(217,83,79,.2)),repeating-linear-gradient(135deg,transparent 0,transparent 7px,rgba(217,83,79,.1) 7px,rgba(217,83,79,.1) 8px)}
-.brf-route{top:0;bottom:0;width:9px;margin-left:-4px;background:#16211E;border-left:1px solid #2B4A40;border-right:1px solid #2B4A40}
+.brf-route{top:0;bottom:0;width:16%;margin-left:-8%;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 400' preserveAspectRatio='none'%3E%3Cg fill='none' vector-effect='non-scaling-stroke'%3E%3Cpath d='M50 0C30 50 70 90 50 140S44 200 50 252S70 340 46 400' stroke='%2324352F' stroke-width='8' vector-effect='non-scaling-stroke'/%3E%3Cpath d='M50 0C30 50 70 90 50 140S44 200 50 252S70 340 46 400' stroke='%234A6459' stroke-width='1' stroke-dasharray='7 7' vector-effect='non-scaling-stroke'/%3E%3C/g%3E%3C/svg%3E") center/100% 100% no-repeat}
 .brf-zone{display:flex;align-items:center;justify-content:center;border:1px solid #2B4A40;background:#0B0D0E repeating-linear-gradient(45deg,transparent 0,transparent 4px,rgba(43,74,64,.55) 4px,rgba(43,74,64,.55) 5px);font-size:11px;letter-spacing:2px;color:#9FB3AA}
-.brf-ville{border:1px solid #3A5248;background-color:#1B2A26;background-image:linear-gradient(#090B0C 3px,transparent 3px),linear-gradient(90deg,#090B0C 3px,transparent 3px);background-size:16px 12px;box-shadow:0 0 18px rgba(125,214,168,.12)}
-.brf-ville b{position:absolute;right:100%;top:50%;margin:-8px 10px 0 0;font-size:12px;letter-spacing:3px;color:#DCE5E0}
+.brf-bat{border:1px solid #3A5248;background:#1B2A26}
+.brf-bat.h{border-color:#7DD6A8;background:#7DD6A8;box-shadow:0 0 10px rgba(125,214,168,.6)}
+.brf-nom{padding:2px 6px;background:#090B0C;font-size:12px;letter-spacing:3px;color:#DCE5E0}
+.brf-nom.s{font-size:10px;letter-spacing:1px}
 .brf-ln{height:0;border-top:3px solid #7DD6A8;color:#7DD6A8;box-shadow:0 0 10px rgba(125,214,168,.45)}
 .brf-ln span{position:absolute;left:0;bottom:8px}
 .brf-ln.dr span{left:auto;right:0}
