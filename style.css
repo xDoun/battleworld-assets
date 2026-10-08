@@ -2039,7 +2039,7 @@ html .navbar a.mainmenu:has(.new-message){background:none!important}
 html .navbar a.mainmenu .new-message{background:rgba(201,154,74,.12)!important;color:#D9A441!important;border:1px solid rgba(201,154,74,.45)!important;border-radius:3px!important;box-shadow:none!important;text-shadow:none!important;animation:none!important}
 html form[name="privmsg_list"] a.topictitle{color:#E4E7E5!important}
 html form[name="privmsg_list"] a.topictitle:hover{color:#7DD6A8!important}
-html form[name="privmsg_list"] .pmlist dt,html form[name="privmsg_list"] .pmlist dt span,html form[name="privmsg_list"] .pmlist dt em{color:#9AA09C!important}
+html form[name="privmsg_list"] .pmlist dt,html form[name="privmsg_list"] .pmlist dt em{color:#9AA09C!important}
 html form[name="privmsg_list"] p,html form[name="privmsg_list"] label,html form[name="privmsg_list"] p a{color:#B9BEBA!important}
 html form[name="privmsg_list"] p a:hover{color:#7DD6A8!important}
 html form[name="privmsg_list"] select{background:#0c0d0e!important;color:#B9BEBA!important;border:1px solid #2a2d2f!important}
@@ -2575,3 +2575,26 @@ html #tabs a:hover,html #tabs a:hover span,html #tabs .activetab a,html #tabs .a
 @keyframes tac-stamp{0%{opacity:0;transform:scale(2.6)}11%{opacity:1;transform:scale(1)}70%{opacity:1;transform:scale(1)}100%{opacity:.3;transform:scale(1)}}
 @media (max-width:640px){.brf-cols{grid-template-columns:1fr}.brf-ph{grid-template-columns:1fr}.brf-ph>div{border-left:0;border-top:1px solid #16302A}.brf-ph>div:first-child{border-top:0}.brf-esc{grid-template-columns:1fr 1fr}.brf-titre{font-size:20px}.brf-carte{padding-top:95%;font-size:8px;letter-spacing:0}.tac-h,.tac-moi{display:none}.tac-stamp span{font-size:20px}}
 @media (prefers-reduced-motion:reduce){.brf *,.tac *{animation-duration:.01s!important}}
+form[name="privmsg_list"] .pmlist dt a:not(.topictitle){color:#B9BEBA!important;font-style:normal;font-weight:600}
+form[name="privmsg_list"] .pmlist dt a:not(.topictitle):hover{color:#7DD6A8!important}
+#privmsgs-menu a{color:#B9BEBA!important}
+#privmsgs-menu a:hover{color:#7DD6A8!important}
+form[name="jumpbox"],form[name="jumpbox"] label{color:#B9BEBA!important}
+.brf-bat.i{border-style:dashed;background:none}
+.brf-cer{aspect-ratio:1;border:1px dashed #7DD6A8;border-radius:50%;background:radial-gradient(circle,rgba(125,214,168,.16),transparent 70%);transform:translate(-50%,-50%);color:#7DD6A8;animation:brf-souffle 3s ease-in-out infinite}
+.brf-cer b{position:absolute;left:50%;bottom:100%;margin-bottom:6px;transform:translateX(-50%)}
+.brf-tr{height:0;border-top:2px dotted #7DD6A8;transform-origin:left center}
+.brf-brou{display:flex;align-items:flex-end;justify-content:flex-end;padding:6px 8px;border:1px dashed #3A4A44;background:repeating-linear-gradient(0deg,rgba(185,190,186,.09) 0,rgba(185,190,186,.09) 1px,transparent 1px,transparent 3px),repeating-linear-gradient(90deg,rgba(185,190,186,.05) 0,rgba(185,190,186,.05) 2px,transparent 2px,transparent 7px);font-size:9px;color:#6F8F82;animation:brf-neige .5s steps(2) infinite}
+.brf-pos.h{background:#D9534F}
+.brf-pos.h::after{border-color:#D9534F}
+.brf-pos.q{background:#090B0C;border:1.5px solid #7DD6A8;color:#7DD6A8}
+.brf-pos.q::after{display:none}
+.brf-leg i.p{border-top:2px dotted #7DD6A8}
+.brf-leg i.c{width:9px;height:9px;border:0;border-radius:50%;background:#D9534F}
+.brf-leg i.z{width:10px;height:10px;border:1px dashed #7DD6A8;border-radius:50%}
+@keyframes brf-souffle{50%{opacity:.5}}
+@keyframes brf-neige{to{background-position:0 3px,7px 0}}
+.pa-actu-list li.pa-actu-soon{font-style:italic;color:#7DD6A8;text-align:left}
+.pa-actu-list li.pa-actu-soon .pa-actu-date{padding:0 4px;border:1px dashed #7DD6A8;font-style:normal}
+.pa-actu-tag{display:table;margin:5px 0 0;padding:1px 7px;border:1px solid #2F7D5F;border-radius:2px;font-family:'Cinzel',serif;font-size:10px;font-weight:700;font-style:normal;letter-spacing:1.5px;text-transform:uppercase;color:#7DD6A8}
+.pa-actu-list li.pa-actu-soon{margin-top:12px;padding-top:12px;border-top:1px dashed rgba(125,214,168,.3)}
