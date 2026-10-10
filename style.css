@@ -281,11 +281,11 @@ a.topictitle{font-family:'Cinzel',serif!important;letter-spacing:.5px}
 .rp-tab-btn.is-active{background:#165B47;color:#fff;border-color:#165B47}
 .rp-tab-panel.is-active{display:block}
 .rp-tab-freezone{margin-bottom:10px;border-radius:4px;overflow:hidden;border:1px solid #1e2226}
-.rp-tab-freezone img{width:100%;height:auto}
+.rp-tab-freezone img{width:100%;max-width:100%!important;height:auto}
 .rp-tab-row{font-size:10.5px;color:#b9beba;margin-bottom:4px;line-height:1.5}
 .rp-tab-label{color:#7dd6a8;font-weight:700;margin-right:4px}
 .rp-tab-gif{margin-bottom:10px;border-radius:4px;overflow:hidden;border:1px solid #1e2226}
-.rp-tab-gif img{width:100%;height:auto}
+.rp-tab-gif img{width:100%!important;max-width:100%!important;height:auto!important;max-height:200px;object-fit:cover}
 .rp-tab-row-sep{padding-bottom:8px;margin-bottom:8px;border-bottom:1px solid #4a4f56}
 .postprofile-info img:not([style*='height']):not([height]){max-width:100%!important;height:auto!important}
 .rp-terre-badge{display:block;text-align:center;font-family:'Cinzel',serif;font-weight:800;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#7DD6A8;background-color:#111315;border:1px solid #165B47;border-radius:4px;padding:4px 8px;margin-bottom:10px}
@@ -301,7 +301,7 @@ a.topictitle{font-family:'Cinzel',serif!important;letter-spacing:.5px}
 .award_tooltiptext_title{font-family:Cinzel,serif!important;font-weight:700!important;color:#7DD6A8!important;font-size:12px!important;letter-spacing:1px;margin-bottom:3px}
 .rp-tab-freezone img,.rp-tab-gif img{display:inline-block!important;vertical-align:middle}
 .rp-tab-freezone img[style*='height'],.rp-tab-freezone img[height]{object-fit:cover}
-.vp-wrap{display:grid;grid-template-columns:220px 1fr 1fr;gap:16px;background-color:#0c0d0e;border:1px solid #1a1e20;border-radius:8px;padding:18px;box-sizing:border-box;align-items:stretch!important}
+.vp-wrap{display:grid;grid-template-columns:220px minmax(0,1fr) minmax(0,1fr);gap:16px;background-color:#0c0d0e;border:1px solid #1a1e20;border-radius:8px;padding:18px;box-sizing:border-box;align-items:stretch!important}
 .vp-col{display:flex;flex-direction:column}
 .vp-col-identity{align-items:center;text-align:center;gap:10px}
 .vp-username-frame{border:1px solid #165B47;border-radius:6px;background-color:#111315;padding:8px 10px;margin-bottom:10px;width:200px;box-sizing:border-box}
