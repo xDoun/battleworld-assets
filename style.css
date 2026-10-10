@@ -763,9 +763,9 @@ p0{font-style:italic;color:#8E948F}
 .mdl-lbl{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:#8E948F;margin:12px 0 4px}
 .chr{--acc:#2F7D5F;--hl:#7DD6A8;--bd:rgba(125,214,168,.22);box-sizing:border-box;max-width:620px;margin:20px auto;padding:14px;background:#111315;border:1px solid var(--bd);outline:1px solid rgba(255,255,255,.05);outline-offset:-8px;font-family:'EB Garamond',serif;color:#B9BEBA}
 .chr>br,.chr-titles>br,.chr-orn>br{display:none}
-.chr-img{display:block;width:100%;height:170px;object-fit:cover;border:1px solid rgba(255,255,255,.06);filter:grayscale(1) brightness(.8);transition:filter .6s}
+.chr-img{display:block;width:100%;height:210px;object-fit:cover;filter:grayscale(1) brightness(.8);transition:filter .6s;-webkit-mask-image:linear-gradient(to bottom,#000 40%,transparent 100%);mask-image:linear-gradient(to bottom,#000 40%,transparent 100%)}
 .chr:hover .chr-img{filter:grayscale(0) brightness(.9)}
-.chr-titles{text-align:center;padding:22px 20px 4px}
+.chr-titles{position:relative;text-align:center;margin-top:-62px;padding:0 20px 4px;text-shadow:0 2px 12px #111315,0 0 6px #111315}
 .chr-titre{font-family:'Cinzel',serif;font-weight:800;font-size:24px;letter-spacing:2px;line-height:1.25;color:#EDF0EE!important}
 .chr-orn{display:flex;align-items:center;justify-content:center;gap:10px;margin:10px 0}
 .chr-orn::before,.chr-orn::after{content:'';width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--acc))}
