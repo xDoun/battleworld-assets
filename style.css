@@ -419,6 +419,7 @@ a.topictitle{font-family:'Cinzel',serif!important;letter-spacing:.5px}
 .mission-title{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.03em;color:#dfe4e0;margin-bottom:9px}
 .mission-agents{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:8px}
 .mission-agents .agent{width:32px;height:32px;font-size:9.5px}
+.mission-agents.mission-agents--6{display:grid!important;grid-template-columns:repeat(3,auto);justify-content:start;gap:8px}
 .agents-legend{display:flex;gap:8px;margin:0 0 10px;font-size:9px;color:#6b706b;flex-wrap:nowrap;white-space:nowrap}
 .agents-legend span{display:inline-flex;align-items:center;gap:3px}
 .legend-dot{width:6px;height:6px;border-radius:50%}
