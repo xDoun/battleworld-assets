@@ -267,7 +267,10 @@ a.topictitle{font-family:'Cinzel',serif!important;letter-spacing:.5px}
 .postbody{width:auto!important;margin-right:0!important;padding:18px 20px!important;overflow:hidden!important}
 .postbody .content{display:block!important;width:100%!important;box-sizing:border-box!important;background-color:#111315!important;border:1px solid #1e2226!important;border-radius:6px!important;padding:18px 22px!important;color:#c9d1d9!important}
 .postbody a{color:#7dd6a8!important}
-.postbody blockquote{font-family:'EB Garamond',serif!important;font-style:italic}
+.postbody blockquote{margin:10px 0 16px!important;padding:14px 18px!important;background:#0c0d0e!important;border:1px solid #1e2226!important;border-left:3px solid #2F7D5F!important;border-radius:4px!important;box-shadow:none!important;font-family:'EB Garamond',serif!important;font-style:italic;font-size:15px;line-height:1.6;color:#9AA09C!important}
+.postbody blockquote cite{display:block;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid #1e2226;font-family:'Cinzel',serif!important;font-style:normal!important;font-weight:700;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#7DD6A8!important}
+.postbody blockquote::before,.postbody blockquote::after{color:#2F7D5F!important;opacity:.45}
+.postbody blockquote blockquote{background:#111315!important}
 .rp-tab-panel{max-height:320px!important;overflow-y:auto!important;overflow-x:hidden!important;display:none;padding-right:8px!important;box-sizing:border-box}
 .rp-tab-panel::-webkit-scrollbar{width:4px!important}
 .rp-tab-panel::-webkit-scrollbar-thumb{background:#165B47!important;border-radius:2px!important}
@@ -416,6 +419,7 @@ a.topictitle{font-family:'Cinzel',serif!important;letter-spacing:.5px}
 .mission-title{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.03em;color:#dfe4e0;margin-bottom:9px}
 .mission-agents{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:8px}
 .mission-agents .agent{width:32px;height:32px;font-size:9.5px}
+.mission-agents.mission-agents--6{display:grid!important;grid-template-columns:repeat(3,auto);justify-content:start;gap:8px}
 .agents-legend{display:flex;gap:8px;margin:0 0 10px;font-size:9px;color:#6b706b;flex-wrap:nowrap;white-space:nowrap}
 .agents-legend span{display:inline-flex;align-items:center;gap:3px}
 .legend-dot{width:6px;height:6px;border-radius:50%}
