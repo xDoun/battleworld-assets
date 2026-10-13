@@ -16,6 +16,17 @@
     "doublons": 1
   },
 
+  "Bobby L. Drake": {
+    "cards": {
+      "captain-america": 1,
+      "phoenix": 1,
+      "thor": 1,
+      "hulk": 1
+    },
+    "sans_legendaire": 4,
+    "doublons": 0
+  },
+
   "Emma Frost": {
     "cards": {
       "ghost-rider": 1,
