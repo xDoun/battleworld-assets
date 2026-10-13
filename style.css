@@ -260,7 +260,7 @@ a.topictitle{font-family:'Cinzel',serif!important;letter-spacing:.5px}
 .post-head .topic-date{background-color:#111315!important;color:#8b949e!important;font-size:10.5px!important;padding:6px 20px!important;border-bottom:1px solid #1e2226!important}
 .post-head .menu-wrap{position:absolute!important;top:auto!important;bottom:0!important;right:0!important;height:25px!important;display:flex!important;align-items:center!important;padding-right:20px!important}
 .post~.post .post-head .topic-title{display:none!important}
-.postprofile{background-color:#111315!important;border-right:1px solid #1e2226!important;color:#b9beba!important;padding:16px!important;width:232px!important;float:left!important;box-sizing:border-box!important}
+.postprofile{background-color:#111315!important;border-right:1px solid #1e2226!important;color:#b9beba!important;padding:16px!important;width:270px!important;float:left!important;box-sizing:border-box!important}
 .postprofile::-webkit-scrollbar{width:4px!important}
 .postprofile::-webkit-scrollbar-thumb{background:#165B47!important;border-radius:2px!important}
 .postprofile a{color:#7dd6a8!important}
@@ -274,7 +274,7 @@ a.topictitle{font-family:'Cinzel',serif!important;letter-spacing:.5px}
 .rp-tab-panel{max-height:320px!important;overflow-y:auto!important;overflow-x:hidden!important;display:none;padding-right:8px!important;box-sizing:border-box}
 .rp-tab-panel::-webkit-scrollbar{width:4px!important}
 .rp-tab-panel::-webkit-scrollbar-thumb{background:#165B47!important;border-radius:2px!important}
-.postprofile-avatar img{width:100%!important;height:auto!important;aspect-ratio:200 / 320!important;border-radius:6px!important;object-fit:cover!important;border:2px solid #165B47!important}
+.postprofile-avatar img{display:block;width:200px!important;max-width:100%!important;height:auto!important;aspect-ratio:200 / 320!important;margin:0 auto!important;border-radius:6px!important;object-fit:cover!important;border:2px solid #165B47!important}
 .postprofile-rank{border-bottom:1px solid #1e2226!important}
 .postprofile-info hr{border:none!important;border-top:1px solid #165B47!important}
 .postprofile-contact{display:none!important}
