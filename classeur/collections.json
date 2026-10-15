@@ -43,14 +43,17 @@
     "doublons": 0
   },
 
-  "Jean Grey": {
+   "Jean Grey": {
     "cards": {
       "ghost-rider": 1,
       "loki": 1,
-      "groot": 1
+      "groot": 1,
+      "hulk": 1,
+      "storm": 1,
+      "venom": 1
     },
-    "sans_legendaire": 3,
-    "doublons": 0
+    "sans_legendaire": 7,
+    "doublons": 1
   },
 
   "Johnathan Blaze": {
