@@ -30,6 +30,17 @@
     "doublons": 0
   },
 
+  "Bucky Barnes": {
+    "cards": {
+      "captain-america": 1,
+      "hulk": 1,
+      "miles-morales": 1,
+      "spider-man": 1
+    },
+    "sans_legendaire": 4,
+    "doublons": 0
+  },
+
   "Emma Frost": {
     "cards": {
       "ghost-rider": 1,
@@ -43,7 +54,7 @@
     "doublons": 0
   },
 
-   "Jean Grey": {
+  "Jean Grey": {
     "cards": {
       "ghost-rider": 1,
       "loki": 1,
