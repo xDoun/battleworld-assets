@@ -82,10 +82,15 @@
       "venom": 1,
       "loki": 1,
       "iron-man": 1,
-      "captain-america": 1
+      "captain-america": 1,
+      "wolverine": 1,
+      "ghost-rider": 1,
+      "silver-surfer": 1,
+      "scarlet-witch": 1,
+      "hulk": 1
     },
-    "sans_legendaire": 5,
-    "doublons": 0
+    "sans_legendaire": 2,
+    "doublons": 2
   },
 
   "Thor Odinson": {
