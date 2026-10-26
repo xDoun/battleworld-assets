@@ -1877,7 +1877,7 @@ img.holo-av{mix-blend-mode:luminosity;opacity:.9}
 .main-tooltip .bw-tip-fields{margin-top:9px;padding-top:8px;border-top:1px solid #1f2523}
 .main-tooltip .bw-tip-fields:empty{display:none}
 .main-tooltip .bw-tip-fields div{margin-bottom:3px;font-size:13.5px;line-height:1.35;color:#B9BEBA;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.main-tooltip .bw-tip-fields b{display:inline-block;margin-right:7px;font-family:'Cinzel',serif;font-weight:700;font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#7DD6A8}
+.main-tooltip .bw-tip-fields div>b{display:inline-block;margin-right:7px;font-family:'Cinzel',serif;font-weight:700;font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#7DD6A8}
 .main-tooltip .tooltip-counts{list-style:none!important;margin:8px 0 0!important;padding:0!important;font-size:12.5px;color:#8b949e}
 .main-tooltip .tooltip-counts li{margin:0!important;padding:0!important}
 .main-tooltip .tooltip-counts li:nth-child(n+2){display:none!important}
